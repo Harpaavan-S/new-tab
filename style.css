@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-size: 800% 100%;
+    animation: gradientBackground 20s linear infinite;
+    transition: 1s ease;
+
+}
+
+body.morning {
+    background-image: linear-gradient(to right, rgb(131, 35, 136), rgb(227, 67, 107), rgb(240, 119, 47), rgb(227, 67, 107), rgb(131, 35, 136));
+    color: rgb(255, 178, 218);
+}
+
+body.afternoon {
+    background-image: linear-gradient(to right, rgb(97, 244, 222),  rgb(110, 120, 255), rgb(97, 244, 222));
+    color: rgb(9, 0, 93);
+}
+
+body.evening {
+    background-image: linear-gradient(to right, rgb(14, 7, 37), rgb(92, 3, 188), rgb(168, 54, 229), rgb(229, 54, 171), rgb(255, 141, 224), rgb(229, 54, 171), rgb(168, 54, 229), rgb(92, 3, 188), rgb(14, 7, 37));
+    color: rgb(201, 178, 255);
+}
+
+body.night {
+    background-image: linear-gradient(to right, rgb(0, 3, 40), rgb(45, 35, 72), rgb(0, 3, 40));
+    color: rgb(178, 179, 218);
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 200% 0%;
+    }
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100dvh;
+}
+
+
+
+h1 {
+    font-size: 150px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.shortcuts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    padding-left: 25px;
+    padding-right: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.icon {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    padding: 12.5px;
+    background-color: rgba(100, 100, 100, 0.4);
+    border-radius: 25%;
+    border: 1px solid rgba(150, 150, 150, 0.4);
+    transition: 0.5s;
+}
+
+.icon:hover {
+    transform: scale(1.07);
+    box-shadow: 0px 0px 20px 10px rgba(255, 238, 194, 0.2);
+    background-color: rgba(125, 125, 125, 0.4);
+}
+
