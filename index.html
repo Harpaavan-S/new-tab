@@ -2,15 +2,18 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&display=swap" rel="stylesheet">
+        <script type="module" src="lib/model-viewer.min.js"></script>
         <title>New Tab</title>
     </head>
     <body>
         <div class="page">
             <div class="title">
-                <h1>Lock In</h1>
+                <h1 id="title-text">Lock In</h1>
             </div>
+            
             <div class="shortcuts">
                 <div class="button">
                     <a href="https://stemia.schoology.com/home/recent-activity" target="_blank" class="link-container"><img src="https://www.nicepng.com/png/full/433-4330628_schoology-icon-schoology-logo-png.png" class="icon"></a>
@@ -24,8 +27,24 @@
                 <div class="button">
                     <a href="https://stemacademy.powerschool.com/guardian/home.html" target="_blank" class="link-container"><img src="https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_1/v1753706742/wpsk12vaus/haoivhrngx1u9wk2jlkj/ps.png" class="icon"></a>
                 </div>
+                <div class="button">
+                    <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" class="link-container"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/gmail-icon.svg" class="icon"></a>
+                </div>
             </div>
+            <model-viewer
+                src="assets/model.glb"
+                camera-controls
+                disable-zoom
+                disable-pan
+                auto-rotate
+                rotation-per-second="15deg"
+                shadow-intensity="0"
+                environment-image="neutral"
+                exposure="0.8"
+                interaction-prompt="none">
+        </model-viewer>
         </div>
+
         <script src="script.js"></script>
     </body>
 </html>

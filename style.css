@@ -7,46 +7,15 @@
 body {
     width: 100%;
     min-height: 100vh;
-    background-size: 400% 100%;
-    animation: gradientBackground 40s linear infinite;
-    transition: 1s ease;
-
+    background-color: rgb(17, 0, 32);
+    color: white;
 }
 
-body.morning {
-    background-image: linear-gradient(to right, rgb(131, 35, 136), rgb(227, 67, 107), rgb(240, 119, 47), rgb(227, 67, 107), rgb(131, 35, 136));
-    color: rgb(255, 178, 218);
-}
-
-body.afternoon {
-    background-image: linear-gradient(to right, rgb(97, 244, 222),  rgb(110, 120, 255), rgb(97, 244, 222));
-    color: rgb(9, 0, 93);
-}
-
-body.evening {
-    background-image: linear-gradient(to right, rgb(14, 7, 37), rgb(92, 3, 188), rgb(168, 54, 229), rgb(92, 3, 188), rgb(14, 7, 37));
-    color: rgb(201, 178, 255);
-}
-
-body.night {
-    background-image: linear-gradient(to right, rgb(0, 3, 40), rgb(45, 35, 72), rgb(0, 3, 40));
-    color: rgb(178, 179, 218);
-}
-
-@keyframes gradientBackground {
-    0% {
-        background-position: 0% 100%;
-    }
-    100% {
-        background-position: 400% 100%;
-    }
-}
 
 .page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100dvh;
 }
@@ -54,10 +23,26 @@ body.night {
 
 
 h1 {
-    font-size: 175px;
+    font-size: 100px;
     font-family: 'Playfair Display', serif;
-    margin-bottom: 50px;
-    margin-top: 50px;
+    margin-bottom: 10px;
+    margin-top: 100px;
+}
+
+model-viewer {
+    flex:1;
+    min-height: 0;
+    width: 100%;
+    max-width: 800px;
+    background: transparent;
+    --poster-color: transparent;
+    animation: bob 4s ease-in-out infinite;
+}
+
+@keyframes bob {
+    0%, 100% { transform:translateY(-8px); }
+    50% { transform:translateY(8px); }
+
 }
 
 .shortcuts {
@@ -69,7 +54,6 @@ h1 {
 .button {
     padding-left: 25px;
     padding-right: 25px;
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,10 +62,10 @@ h1 {
 }
 
 .icon {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
-    padding: 12.5px;
+    padding: 10px;
     background-color: rgba(100, 100, 100, 0.4);
     border-radius: 25%;
     border: 1px solid rgba(150, 150, 150, 0.4);
@@ -93,4 +77,3 @@ h1 {
     box-shadow: 0px 0px 20px 10px rgba(255, 238, 194, 0.2);
     background-color: rgba(125, 125, 125, 0.4);
 }
-
